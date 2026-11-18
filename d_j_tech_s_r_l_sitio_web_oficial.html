@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&J Tech S.R.L. | Tecnología confiable y soporte ágil a tu alcance</title>
+    <meta name="description" content="D&J Tech S.R.L. - Comercialización de computadoras, laptops, periféricos y taller de soporte técnico especializado en Costa Rica.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            900: '#0F172A',
+                            800: '#1E3A8A',
+                        },
+                        skybrand: {
+                            500: '#0EA5E9',
+                            400: '#38BDF8',
+                        },
+                        accent: {
+                            500: '#F97316',
+                            600: '#EA580C',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-[#0EA5E9] selection:text-white">
+
+    <!-- ==================== 1. NAVEGACIÓN (HEADER) ==================== -->
+    <header class="sticky top-0 z-50 bg-[#0F172A]/95 backdrop-blur-md border-b border-slate-800 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logotipo SVG Escudo + Nombre Corporativo -->
+                <a href="#inicio" class="flex items-center gap-3 group focus:outline-none">
+                    <!-- Emblema Escudo D&J Tech (Azul Marino, Celeste y Naranja) -->
+                    <svg class="w-11 h-11 transition-transform duration-300 group-hover:scale-105 drop-shadow-md" viewBox="0 0 100 112" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo D&J Tech">
+                        <!-- Borde exterior del escudo -->
+                        <path d="M50 4L10 20V54C10 81.5 27.1 105.4 50 110C72.9 105.4 90 81.5 90 54V20L50 4Z" fill="#0F172A" stroke="#38BDF8" stroke-width="4.5" stroke-linejoin="round"/>
+                        <!-- Cuerpo interior Azul Marino (#1E3A8A) -->
+                        <path d="M50 11L17 24.2V53.5C17 77.2 31.6 97.8 50 102.2C68.4 97.8 83 77.2 83 53.5V24.2L50 11Z" fill="#1E3A8A"/>
+                        <!-- Franja diagonal celeste tecnológico -->
+                        <path d="M17 50L83 28V39L17 61V50Z" fill="#0EA5E9" fill-opacity="0.35"/>
+                        <!-- Acento superior tipo circuito en Naranja (#F97316) -->
+                        <path d="M50 11L66 17.5L50 24L34 17.5L50 11Z" fill="#F97316"/>
+                        <!-- Siglas Integradas D&J -->
+                        <text x="50" y="64" text-anchor="middle" fill="#FFFFFF" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="25" letter-spacing="-0.5">D<tspan fill="#F97316">&amp;</tspan>J</text>
+                        <!-- Detalle inferior tecnológico -->
+                        <rect x="33" y="73" width="34" height="3.5" rx="1.75" fill="#38BDF8"/>
+                        <circle cx="50" cy="84" r="3" fill="#F97316"/>
+                    </svg>
+                    
+                    <div class="flex flex-col">
+                        <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-white leading-none">
+                            D<span class="text-[#F97316]">&amp;</span>J <span class="text-[#38BDF8]">Tech</span>
+                        </span>
+                        <span class="text-[11px] font-medium tracking-wider uppercase text-slate-400 mt-0.5">Costa Rica • S.R.L.</span>
+                    </div>
+                </a>
+
+                <!-- Enlaces de Navegación Escritorio -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#inicio" class="text-sm font-medium text-slate-200 hover:text-[#38BDF8] transition-colors">Inicio</a>
+                    <a href="#quienes-somos" class="text-sm font-medium text-slate-200 hover:text-[#38BDF8] transition-colors">Quiénes Somos</a>
+                    <a href="#catalogo" class="text-sm font-medium text-slate-200 hover:text-[#38BDF8] transition-colors">Catálogo</a>
+                    <a href="#contacto" class="text-sm font-medium text-slate-200 hover:text-[#38BDF8] transition-colors">Contacto</a>
+                </nav>
+
+                <!-- Botón CTA Header + Botón Menú Móvil -->
+                <div class="flex items-center gap-3">
+                    <a href="https://wa.me/50688888888?text=Hola%20D%26J%20Tech,%20me%20gustar%C3%ADa%20solicitar%20asesor%C3%ADa%20tecnol%C3%B3gica." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 bg-[#F97316] hover:bg-[#EA580C] text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow-md shadow-orange-500/20 transition-all duration-200 hover:-translate-y-0.5">
+                        <!-- Icono Rayo / Soporte -->
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                        Cotizar Ahora
+                    </a>
+
+                    <!-- Botón Hamburguesa Móvil -->
+                    <button id="mobile-menu-btn" type="button" class="md:hidden inline-flex items-center justify-center p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none" aria-label="Abrir menú principal">
+                        <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Desplegable Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0F172A] border-t border-slate-800 px-4 pt-3 pb-6 space-y-2">
+            <a href="#inicio" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-[#38BDF8]">Inicio</a>
+            <a href="#quienes-somos" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-[#38BDF8]">Quiénes Somos</a>
+            <a href="#catalogo" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-[#38BDF8]">Catálogo y Precios</a>
+            <a href="#contacto" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-[#38BDF8]">Contacto y Ubicación</a>
+            <div class="pt-2">
+                <a href="https://wa.me/50688888888?text=Hola%20D%26J%20Tech,%20deseo%20consultar%20por%20sus%20productos%20y%20servicios." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full bg-[#F97316] text-white font-semibold py-3 px-4 rounded-xl shadow-md">
+                    Contactar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==================== 2. HERO SECTION ==================== -->
+        <section id="inicio" class="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E3A8A] to-[#0F172A] text-white py-20 lg:py-28">
+            <!-- Elementos decorativos de fondo (Grilla tecnológica y resplandores) -->
+            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#38BDF8 1px, transparent 1px); background-size: 28px 28px;"></div>
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-[#0EA5E9]/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-[#F97316]/15 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Columna Texto Principal -->
+                    <div class="lg:col-span-7 space-y-7 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-[#38BDF8]/30 text-[#38BDF8] text-xs sm:text-sm font-semibold tracking-wide">
+                            <span class="w-2 h-2 rounded-full bg-[#F97316] animate-pulse"></span>
+                            Soluciones Integrales en Costa Rica 🇨🇷
+                        </div>
+
+                        <h1 class="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.12]">
+                            Tecnología confiable y <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#38BDF8] to-[#0EA5E9]">soporte ágil</span> a tu alcance.
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                            En <strong class="text-white">D&amp;J Tech S.R.L.</strong> combinamos la venta de laptops, periféricos y componentes de alto rendimiento con un taller de soporte técnico especializado y garantía directa bajo un mismo techo.
+                        </p>
+
+                        <!-- Botones de Acción Hero -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="https://wa.me/50688888888?text=Hola%20D%26J%20Tech,%20vengo%20de%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20recibir%20atenci%C3%B3n." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#F97316] hover:bg-[#EA580C] text-white font-bold text-base px-7 py-4 rounded-2xl shadow-xl shadow-orange-600/25 transition-all duration-300 hover:-translate-y-1">
+                                <!-- Icono WhatsApp -->
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+                                </svg>
+                                Hablar por WhatsApp
+                            </a>
+
+                            <a href="#catalogo" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold text-base px-7 py-4 rounded-2xl transition-all duration-300">
+                                Ver Catálogo y Precios
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- Indicadores de Confianza -->
+                        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-white/15 max-w-lg mx-auto lg:mx-0">
+                            <div>
+                                <p class="font-heading font-bold text-xl sm:text-2xl text-[#38BDF8]">&lt; 5 min</p>
+                                <p class="text-xs text-slate-300">Respuesta digital</p>
+                            </div>
+                            <div>
+                                <p class="font-heading font-bold text-xl sm:text-2xl text-[#F97316]">24 - 48h</p>
+                                <p class="text-xs text-slate-300">Garantía de taller</p>
+                            </div>
+                            <div>
+                                <p class="font-heading font-bold text-xl sm:text-2xl text-white">100% CR</p>
+                                <p class="text-xs text-slate-300">Envíos nacionales</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna Tarjeta Visual Tecnológica -->
+                    <div class="lg:col-span-5">
+                        <div class="relative bg-[#0F172A]/80 backdrop-blur-xl border border-[#38BDF8]/30 rounded-3xl p-7 shadow-2xl">
+                            <div class="flex items-center justify-between border-b border-slate-700/80 pb-4 mb-6">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-3 h-3 rounded-full bg-[#F97316]"></span>
+                                    <span class="w-3 h-3 rounded-full bg-[#38BDF8]"></span>
+                                    <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+                                </div>
+                                <span class="text-xs font-mono text-[#38BDF8] bg-[#0EA5E9]/10 px-3 py-1 rounded-full">Diagnóstico &amp; Venta</span>
+                            </div>
+
+                            <div class="space-y-4">
+                                <!-- Item 1 -->
+                                <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-800/70 border border-slate-700/60 hover:border-[#0EA5E9]/50 transition-colors">
+                                    <div class="p-3 rounded-xl bg-[#0EA5E9]/20 text-[#38BDF8] shrink-0">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-heading font-bold text-white text-base">Equipos Listos para Usar</h3>
+                                        <p class="text-xs text-slate-300 mt-1">Laptops, periféricos y componentes SSD con garantía directa y factura electrónica.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Item 2 -->
+                                <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-800/70 border border-slate-700/60 hover:border-[#F97316]/50 transition-colors">
+                                    <div class="p-3 rounded-xl bg-[#F97316]/20 text-[#F97316] shrink-0">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-heading font-bold text-white text-base">Taller Especializado</h3>
+                                        <p class="text-xs text-slate-300 mt-1">Mantenimiento preventivo, cambio de pasta térmica de alto rendimiento y optimización.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Item 3 -->
+                                <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-800/70 border border-slate-700/60 hover:border-[#38BDF8]/50 transition-colors">
+                                    <div class="p-3 rounded-xl bg-[#38BDF8]/20 text-[#38BDF8] shrink-0">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-heading font-bold text-white text-base">Asesoría Según tu Presupuesto</h3>
+                                        <p class="text-xs text-slate-300 mt-1">Atención transparente para estudiantes, gamers, profesionales y PYMES costarricenses.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 3. QUIÉNES SOMOS ==================== -->
+        <section id="quienes-somos" class="py-20 lg:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Encabezado de Sección -->
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#0EA5E9] bg-[#0EA5E9]/10 px-3.5 py-1.5 rounded-full mb-3">
+                        Nuestra Identidad • D&amp;J Tech S.R.L.
+                    </span>
+                    <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-[#0F172A] tracking-tight">
+                        Venta tecnológica y soporte experto <span class="text-[#1E3A8A]">bajo un mismo techo</span>
+                    </h2>
+                    <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+                        Fundada en Costa Rica por <strong>Dylan y Jared</strong>, <strong>D&amp;J Tech S.R.L.</strong> nace para cubrir la necesidad de un comercio local integral que combine equipos tecnológicos de alta calidad a precios accesibles con soporte técnico rápido y garantía real.
+                    </p>
+                </div>
+
+                <!-- Tarjetas: Misión, Visión y Propuesta de Valor -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Tarjeta 1: Misión -->
+                    <div class="group bg-slate-50 hover:bg-white rounded-3xl p-8 border border-slate-200/80 hover:border-[#0EA5E9] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-2xl bg-[#1E3A8A] text-white flex items-center justify-center mb-6 group-hover:bg-[#0EA5E9] transition-colors">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-[#0F172A] mb-3">Misión</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Brindar productos y servicios tecnológicos de alta calidad a estudiantes, profesionales y empresas mediante innovación constante, atención personalizada y precios accesibles en el mercado costarricense.
+                        </p>
+                    </div>
+
+                    <!-- Tarjeta 2: Visión -->
+                    <div class="group bg-slate-50 hover:bg-white rounded-3xl p-8 border border-slate-200/80 hover:border-[#38BDF8] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-2xl bg-[#0EA5E9] text-white flex items-center justify-center mb-6 group-hover:bg-[#1E3A8A] transition-colors">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-[#0F172A] mb-3">Visión</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Ser una empresa reconocida en Costa Rica por ofrecer soluciones tecnológicas confiables e innovadoras de manera sostenida durante los próximos cinco años.
+                        </p>
+                    </div>
+
+                    <!-- Tarjeta 3: Propuesta de Valor -->
+                    <div class="group bg-gradient-to-br from-[#0F172A] to-[#1E3A8A] text-white rounded-3xl p-8 border border-[#1E3A8A] shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-2xl bg-[#F97316] text-white flex items-center justify-center mb-6 shadow-md shadow-orange-500/30">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-white mb-3">Propuesta de Valor</h3>
+                        <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+                            Productos tecnológicos modernos y originales con garantía directa, acompañados de asesoría personalizada según el presupuesto de cada cliente y un taller de servicio técnico especializado de respuesta rápida.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Banner Liderazgo Socios Fundadores -->
+                <div class="mt-12 bg-slate-100 rounded-3xl p-6 sm:p-8 border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="flex -space-x-3">
+                            <div class="w-12 h-12 rounded-full bg-[#1E3A8A] text-white font-heading font-bold flex items-center justify-center ring-4 ring-white">D</div>
+                            <div class="w-12 h-12 rounded-full bg-[#F97316] text-white font-heading font-bold flex items-center justify-center ring-4 ring-white">J</div>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-bold text-[#0F172A] text-base sm:text-lg">Gestión Ágil y Atención Personalizada</h4>
+                            <p class="text-xs sm:text-sm text-slate-600">
+                                <strong>Dylan</strong> (Dirección Técnica, Compras e Inventario) &amp; <strong>Jared</strong> (Gestión Financiera, Ventas y Atención Digital).
+                            </p>
+                        </div>
+                    </div>
+                    <span class="inline-flex items-center gap-2 text-xs font-semibold text-[#1E3A8A] bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm shrink-0">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                        Empresa 100% Costarricense
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== 4. CATÁLOGO DE PRODUCTOS Y SERVICIOS ==================== -->
+        <section id="catalogo" class="py-20 lg:py-24 bg-slate-100 border-y border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Encabezado Catálogo -->
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#F97316] bg-[#F97316]/10 px-3.5 py-1.5 rounded-full mb-3">
+                        Precios Transparentes en Colones (₡)
+                    </span>
+                    <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-[#0F172A] tracking-tight">
+                        Catálogo de Productos y Servicios
+                    </h2>
+                    <p class="mt-4 text-base sm:text-lg text-slate-600">
+                        Soluciones diseñadas para potenciar tu estudio, oficina o setup gaming. Cotizá directamente por WhatsApp con atención inmediata.
+                    </p>
+                </div>
+
+                <!-- Grid de 4 Productos / Servicios -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
+                    
+                    <!-- Producto 1: Mantenimiento Preventivo Completo -->
+                    <article class="flex flex-col justify-between bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#0EA5E9] transition-all duration-300 hover:-translate-y-1.5 overflow-hidden">
+                        <div>
+                            <!-- Cabecera Visual SVG -->
+                            <div class="h-40 bg-gradient-to-br from-[#0F172A] to-[#1E3A8A] p-6 flex flex-col justify-between relative overflow-hidden">
+                                <span class="self-start text-[11px] font-bold uppercase tracking-wider bg-[#0EA5E9] text-white px-3 py-1 rounded-full">
+                                    Servicio Técnico
+                                </span>
+                                <div class="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/15 text-[#38BDF8] flex items-center justify-center">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <!-- Contenido -->
+                            <div class="p-6">
+                                <h3 class="font-heading font-bold text-lg text-[#0F172A] leading-snug">
+                                    Mantenimiento Preventivo Completo
+                                </h3>
+                                <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+                                    Limpieza interna profunda, cambio de pasta térmica de alto rendimiento y optimización de sistema operativo.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Precio + Botón Cotizar -->
+                        <div class="px-6 pb-6 pt-4 border-t border-slate-100">
+                            <div class="mb-4">
+                                <span class="text-xs text-slate-500 block">Inversión total</span>
+                                <span class="font-heading font-extrabold text-2xl text-[#1E3A8A]">₡18.000</span>
+                            </div>
+                            <a href="https://wa.me/50688888888?text=Hola%20D%26J%20Tech,%20me%20interesa%20cotizar%20el%20servicio%20de%20Mantenimiento%20Preventivo%20Completo%20(%E2%82%A118.000)." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#0F172A] hover:bg-[#F97316] text-white font-semibold text-sm py-3 px-4 rounded-xl transition-colors duration-200">
+                                Cotizar por WhatsApp
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Producto 2: Combo Periféricos -->
+                    <article class="flex flex-col justify-between bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#0EA5E9] transition-all duration-300 hover:-translate-y-1.5 overflow-hidden">
+                        <div>
+                            <!-- Cabecera Visual SVG -->
+                            <div class="h-40 bg-gradient-to-br from-[#1E3A8A] to-[#0EA5E9] p-6 flex flex-col justify-between relative overflow-hidden">
+                                <span class="self-start text-[11px] font-bold uppercase tracking-wider bg-[#0F172A] text-white px-3 py-1 rounded-full">
+                                    Accesorios &amp; Gaming
+                                </span>
+                                <div class="w-14 h-14 rounded-2xl bg-white/15 backdrop-blur-sm border border-white/20 text-white flex items-center justify-center">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                        <rect x="2" y="6" width="20" height="12" rx="2" ry="2"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M8 14h8"/>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <!-- Contenido -->
+                            <div class="p-6">
+                                <h3 class="font-heading font-bold text-lg text-[#0F172A] leading-snug">
+                                    Combo Periféricos
+                                </h3>
+                                <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+                                    Teclado mecánico retroiluminado + Mouse óptico ergonómico para estudio, oficina o gaming.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Precio + Botón Cotizar -->
+                        <div class="px-6 pb-6 pt-4 border-t border-slate-100">
+                            <div class="mb-4">
+                                <span class="text-xs text-slate-500 block">Precio especial</span>
+                                <span class="font-heading font-extrabold text-2xl text-[#1E3A8A]">₡25.000</span>
+                            </div>
+                            <a href="https://wa.me/50688888888?text=Hola%20D%26J%20Tech,%20me%20interesa%20cotizar%20el%20Combo%20Perif%C3%A9ricos%20(%E2%82%A125.000)." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#0F172A] hover:bg-[#F97316] text-white font-semibold text-sm py-3 px-4 rounded-xl transition-colors duration-200">
+                                Cotizar por WhatsApp
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Producto 3: Actualización de Rendimiento SSD -->
+                    <article class="flex flex-col justify-between bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#0EA5E9] transition-all duration-300 hover:-translate-y-1.5 overflow-hidden">
+                        <div>
+                            <!-- Cabecera Visual SVG -->
+                            <div class="h-40 bg-gradient-to-br from-[#0F172A] via-[#1E3A8A] to-[#0EA5E9] p-6 flex flex-col justify-between relative overflow-hidden">
+                                <span class="self-start text-[11px] font-bold uppercase tracking-wider bg-[#F97316] text-white px-3 py-1 rounded-full">
+                                    Upgrade Rápido
+                                </span>
+                                <div class="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/15 text-[#38BDF8] flex items-center justify-center">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                        <rect x="4" y="4" width="16" height="16" rx="2"/>
+                                        <rect x="9" y="9" width="6" height="6"/>
+                                        <path stroke-linecap="round" d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <!-- Contenido -->
+                            <div class="p-6">
+                                <h3 class="font-heading font-bold text-lg text-[#0F172A] leading-snug">
+                                    Actualización de Rendimiento SSD
+                                </h3>
+                                <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+                                    Unidad de estado sólido (SSD 480 GB) + instalación física y clonación de datos/sistema.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Precio + Botón Cotizar -->
+                        <div class="px-6 pb-6 pt-4 border-t border-slate-100">
+                            <div class="mb-4">
+                                <span class="text-xs text-slate-500 block">Incluye instalación</span>
+                                <span class="font-heading font-extrabold text-2xl text-[#1E3A8A]">₡38.000</span>
+                            </div>
+                            <a href="https://wa.me/50688888888?text=Hola%20D%26J%20Tech,%20me%20interesa%20cotizar%20la%20Actualizaci%C3%B3n%20de%20Rendimiento%20SSD%20(%E2%82%A138.000)." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#0F172A] hover:bg-[#F97316] text-white font-semibold text-sm py-3 px-4 rounded-xl transition-colors duration-200">
+                                Cotizar por WhatsApp
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Producto 4: Laptop Estudio / Oficina -->
+                    <article class="flex flex-col justify-between bg-white rounded-3xl border-2 border-[#F97316]/80 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 overflow-hidden relative">
+                        <div>
+                            <!-- Cabecera Visual SVG -->
+                            <div class="h-40 bg-gradient-to-br from-[#0F172A] to-[#1E3A8A] p-6 flex flex-col justify-between relative overflow-hidden">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-[11px] font-bold uppercase tracking-wider bg-[#F97316] text-white px-3 py-1 rounded-full">
+                                        Destacado
+                                    </span>
+                                    <span class="text-[11px] font-semibold text-[#38BDF8]">Garantía Directa</span>
+                                </div>
+                                <div class="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/15 text-white flex items-center justify-center">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v10H4V6z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2 18h20"/>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <!-- Contenido -->
+                            <div class="p-6">
+                                <h3 class="font-heading font-bold text-lg text-[#0F172A] leading-snug">
+                                    Laptop Estudio / Oficina
+                                </h3>
+                                <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+                                    Equipo portátil con procesador Core i5 / Ryzen 5, 8 GB de RAM, 512 GB SSD y garantía directa.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Precio + Botón Cotizar -->
+                        <div class="px-6 pb-6 pt-4 border-t border-slate-100">
+                            <div class="mb-4">
+                                <span class="text-xs text-slate-500 block">Equipo listo para usar</span>
+                                <span class="font-heading font-extrabold text-2xl text-[#F97316]">₡345.000</span>
+                            </div>
+                            <a href="https://wa.me/50688888888?text=Hola%20D%26J%20Tech,%20me%20interesa%20cotizar%20la%20Laptop%20Estudio%20%2F%20Oficina%20(%E2%82%A1345.000)." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#F97316] hover:bg-[#EA580C] text-white font-semibold text-sm py-3 px-4 rounded-xl shadow-md shadow-orange-500/20 transition-colors duration-200">
+                                Cotizar por WhatsApp
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 5. CONTACTO Y UBICACIÓN ==================== -->
+        <section id="contacto" class="py-20 lg:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    
+                    <!-- Columna Información Comercial y Logística -->
+                    <div class="lg:col-span-6 space-y-8">
+                        <div>
+                            <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#0EA5E9] bg-[#0EA5E9]/10 px-3.5 py-1.5 rounded-full mb-3">
+                                Atención Híbrida en Costa Rica
+                            </span>
+                            <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-[#0F172A] tracking-tight">
+                                Contactanos y cotizá tu solución hoy mismo
+                            </h2>
+                            <p class="mt-4 text-slate-600 text-base leading-relaxed">
+                                Contamos con punto de venta y taller físico para recepción directa de equipos, además de envíos seguros a todo el territorio nacional.
+                            </p>
+                        </div>
+
+                        <!-- Bloques de Información -->
+                        <div class="space-y-4">
+                            <!-- Ubicación y Envíos -->
+                            <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
+                                <div class="p-3 rounded-xl bg-[#1E3A8A] text-white shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-heading font-bold text-[#0F172A] text-base">Tienda Física, Taller y Envíos Nacionales</h3>
+                                    <p class="text-sm text-slate-600 mt-1">
+                                        Atención presencial en nuestro local y taller técnico. Envíos a todo Costa Rica mediante mensajería privada o <strong>Correos de Costa Rica</strong>.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Horario -->
+                            <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
+                                <div class="p-3 rounded-xl bg-[#0EA5E9] text-white shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-heading font-bold text-[#0F172A] text-base">Horario de Atención</h3>
+                                    <p class="text-sm text-slate-600 mt-1">
+                                        Lunes a Viernes: 8:30 a.m. – 6:00 p.m. | Sábados: 9:00 a.m. – 3:00 p.m.<br>
+                                        <span class="text-xs font-medium text-[#1E3A8A]">Respuesta digital por WhatsApp en menos de 5 minutos.</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Métodos de Pago y Facturación -->
+                            <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
+                                <div class="p-3 rounded-xl bg-[#F97316] text-white shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-heading font-bold text-[#0F172A] text-base">Facilidades de Pago y Respaldo Tributario</h3>
+                                    <p class="text-sm text-slate-600 mt-1">
+                                        Aceptamos pagos inmediatos por <strong>SINPE Móvil</strong> sin comisiones y transferencias bancarias. Emitimos <strong>Factura Electrónica</strong> autorizada por el Ministerio de Hacienda.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Redes Sociales Oficiales -->
+                        <div class="pt-2">
+                            <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Seguinos en nuestras redes sociales</p>
+                            <div class="flex flex-wrap items-center gap-3">
+                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#0F172A] text-slate-700 hover:text-white text-sm font-semibold transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                                    </svg>
+                                    Instagram
+                                </a>
+                                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#0F172A] text-slate-700 hover:text-white text-sm font-semibold transition-colors">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                                    </svg>
+                                    TikTok
+                                </a>
+                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#0F172A] text-slate-700 hover:text-white text-sm font-semibold transition-colors">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                                    </svg>
+                                    Facebook
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna Formulario Rápido hacia WhatsApp -->
+                    <div class="lg:col-span-6">
+                        <div class="bg-[#0F172A] text-white rounded-3xl p-8 sm:p-10 shadow-2xl border border-slate-800">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                                <span class="text-xs font-semibold uppercase tracking-wider text-[#38BDF8]">Canal Directo WhatsApp Business</span>
+                            </div>
+                            <h3 class="font-heading font-bold text-2xl text-white">Envianos tu consulta directa</h3>
+                            <p class="text-sm text-slate-300 mt-2 mb-6">
+                                Completá tus datos y te redirigiremos automáticamente a nuestro WhatsApp con tu consulta lista para atenderte.
+                            </p>
+
+                            <form id="whatsapp-form" class="space-y-4">
+                                <div>
+                                    <label for="client-name" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Tu Nombre</label>
+                                    <input type="text" id="client-name" required placeholder="Ej. Sofía Rodríguez" class="w-full px-4 py-3.5 rounded-xl bg-slate-800/90 border border-slate-700 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-[#38BDF8] transition-colors">
+                                </div>
+
+                                <div>
+                                    <label for="service-select" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Producto o Servicio de Interés</label>
+                                    <select id="service-select" class="w-full px-4 py-3.5 rounded-xl bg-slate-800/90 border border-slate-700 text-white text-sm focus:outline-none focus:border-[#38BDF8] transition-colors">
+                                        <option value="Mantenimiento Preventivo Completo (₡18.000)">Mantenimiento Preventivo Completo (₡18.000)</option>
+                                        <option value="Combo Periféricos (₡25.000)">Combo Periféricos (₡25.000)</option>
+                                        <option value="Actualización de Rendimiento SSD (₡38.000)">Actualización de Rendimiento SSD (₡38.000)</option>
+                                        <option value="Laptop Estudio / Oficina (₡345.000)">Laptop Estudio / Oficina (₡345.000)</option>
+                                        <option value="Diagnóstico / Asesoría Personalizada">Diagnóstico Técnico / Asesoría Personalizada</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="client-message" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Detalle o Consulta (Opcional)</label>
+                                    <textarea id="client-message" rows="3" placeholder="Contanos el modelo de tu equipo o si necesitás envío por Correos de Costa Rica..." class="w-full px-4 py-3 rounded-xl bg-slate-800/90 border border-slate-700 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-[#38BDF8] transition-colors"></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full inline-flex items-center justify-center gap-3 bg-[#F97316] hover:bg-[#EA580C] text-white font-bold text-base py-4 px-6 rounded-2xl shadow-lg shadow-orange-600/25 transition-all duration-200 hover:-translate-y-0.5 mt-2">
+                                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+                                    </svg>
+                                    Enviar Consulta a WhatsApp
+                                </button>
+                            </form>
+
+                            <!-- Enlace Directo Alternativo -->
+                            <div class="mt-5 pt-4 border-t border-slate-800 text-center">
+                                <a href="https://wa.me/50688888888?text=Hola%20D%26J%20Tech,%20necesito%20informaci%C3%B3n%20sobre%20sus%20productos%20y%20servicios." target="_blank" rel="noopener noreferrer" class="text-xs text-[#38BDF8] hover:underline font-medium">
+                                    O hacé clic aquí para abrir el chat directo (+506 8888-8888) →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== 6. FOOTER ==================== -->
+    <footer class="bg-[#0F172A] text-slate-400 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                
+                <!-- Marca y Eslogan -->
+                <div class="flex items-center gap-3">
+                    <svg class="w-9 h-9" viewBox="0 0 100 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 4L10 20V54C10 81.5 27.1 105.4 50 110C72.9 105.4 90 81.5 90 54V20L50 4Z" fill="#0F172A" stroke="#38BDF8" stroke-width="4.5"/>
+                        <path d="M50 11L17 24.2V53.5C17 77.2 31.6 97.8 50 102.2C68.4 97.8 83 77.2 83 53.5V24.2L50 11Z" fill="#1E3A8A"/>
+                        <path d="M50 11L66 17.5L50 24L34 17.5L50 11Z" fill="#F97316"/>
+                        <text x="50" y="64" text-anchor="middle" fill="#FFFFFF" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="25">D<tspan fill="#F97316">&amp;</tspan>J</text>
+                    </svg>
+                    <div>
+                        <span class="font-heading font-bold text-white text-base block">D&amp;J Tech S.R.L.</span>
+                        <span class="text-xs text-slate-400">Tecnología confiable y soporte ágil a tu alcance.</span>
+                    </div>
+                </div>
+
+                <!-- Enlaces Rápidos Footer -->
+                <div class="flex flex-wrap justify-center gap-6 text-xs font-medium">
+                    <a href="#inicio" class="hover:text-[#38BDF8] transition-colors">Inicio</a>
+                    <a href="#quienes-somos" class="hover:text-[#38BDF8] transition-colors">Quiénes Somos</a>
+                    <a href="#catalogo" class="hover:text-[#38BDF8] transition-colors">Catálogo</a>
+                    <a href="#contacto" class="hover:text-[#38BDF8] transition-colors">Contacto</a>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-slate-800/80 text-center text-xs text-slate-400">
+                <p>© 2026 D&amp;J Tech S.R.L. - Costa Rica. Proyecto de Emprendimiento y Gestión.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== BOTÓN FLOTANTE DE WHATSAPP ==================== -->
+    <a href="https://wa.me/50688888888?text=Hola%20D%26J%20Tech,%20quisiera%20hacer%20una%20consulta%20desde%20su%20sitio%20web." target="_blank" rel="noopener noreferrer" aria-label="Contactar a D&J Tech por WhatsApp" class="fixed bottom-6 right-6 z-50 group flex items-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 sm:px-5 sm:py-3.5 rounded-full shadow-2xl shadow-emerald-950/40 transition-all duration-300 hover:scale-105">
+        <svg class="w-7 h-7 fill-current shrink-0" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+        </svg>
+        <span class="hidden sm:inline font-heading font-bold text-sm pr-1">WhatsApp</span>
+    </a>
+
+    <!-- ==================== INTERACTIVIDAD JAVASCRIPT ==================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Control del menú móvil
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    const isHidden = mobileMenu.classList.toggle('hidden');
+                    iconOpen.classList.toggle('hidden', !isHidden);
+                    iconClose.classList.toggle('hidden', isHidden);
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        iconOpen.classList.remove('hidden');
+                        iconClose.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Generador dinámico de mensaje hacia WhatsApp desde el formulario
+            const whatsappForm = document.getElementById('whatsapp-form');
+            if (whatsappForm) {
+                whatsappForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const name = document.getElementById('client-name').value.trim();
+                    const service = document.getElementById('service-select').value;
+                    const message = document.getElementById('client-message').value.trim();
+
+                    let text = `Hola D&J Tech, mi nombre es ${name}. Me interesa consultar sobre: ${service}.`;
+                    if (message) {
+                        text += ` Detalle adicional: ${message}`;
+                    }
+
+                    const encodedText = encodeURIComponent(text);
+                    const waUrl = `https://wa.me/50688888888?text=${encodedText}`;
+                    window.open(waUrl, '_blank', 'noopener,noreferrer');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
